@@ -1,8 +1,7 @@
 import socket
-import os
 
-HOST = '0.0.0.0'
-PORT = 12345
+HOST = '192.168.1.16'
+PORT = 4030
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind((HOST, PORT))
