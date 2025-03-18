@@ -1,6 +1,7 @@
 const express = require("express");
 
 const app = express();
+const ip = "0.0.0.0";
 const port = 4000;
 
 app.use(express.json());
@@ -38,6 +39,6 @@ app.post("/mahasiswa", (req, res) => {
     .json({ message: "Mahasiswa berhasil ditambahkan", data: { nama, nim } });
 });
 
-app.listen(port, () => {
-  console.log(`server berjalan di http://localhost:${port}`);
+app.listen(port, ip, () => {
+  console.log(`server berjalan di http://${ip}:${port}`);
 });
