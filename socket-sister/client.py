@@ -2,8 +2,8 @@ import socket
 import time
 import os
 
-SERVER_IP = '127.0.0.1'
-PORT = 12345
+SERVER_IP = '192.168.1.16'
+PORT = 4030
 
 def send_file(filename):
     file_size = os.path.getsize(filename)
@@ -36,4 +36,6 @@ for size in [1, 10, 100, 1024]:  # KB
 
     send_file(filename)
     
+send_file("ic_photo.png")
+
 send_file("video1949257301.mp4")
