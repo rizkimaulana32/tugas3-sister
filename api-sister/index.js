@@ -7,17 +7,11 @@ const port = 4000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/jasonrizki", (req, res) => {
-  res.json([
-    {
-      nama: "Jasson Franklyn Wang",
-      nim: "L0122081",
-    },
-    {
-      nama: "Mohammad Rizki Maulana",
-      nim: "L0122096",
-    },
-  ]);
+app.get("/rizki", (req, res) => {
+  res.json({
+    nama: "Mohammad Rizki Maulana",
+    nim: "L0122096",
+  });
 });
 
 let mahasiswa = [];
